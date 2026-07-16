@@ -1,0 +1,26 @@
+# Build outputs
+bin/
+obj/
+artifacts/
+
+# IDE and editor files
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Local environment / secrets
+.env
+appsettings.Development.json
+appsettings.json
+
+# Test results
+TestResults/
