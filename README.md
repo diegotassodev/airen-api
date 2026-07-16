@@ -2,6 +2,24 @@
 
 API ASP.NET Core para gerenciamento de personagens de Airen.
 
+## Endpoints da API
+
+A aplicação expõe os seguintes endpoints:
+
+### Personagens
+- POST /personagem: cria um novo personagem
+- GET /personagem: lista todos os personagens
+- GET /personagem/{id}: busca um personagem pelo ID
+- PUT /personagem/{id}: atualiza um personagem existente
+- DELETE /personagem/{id}: remove um personagem
+
+### Potências
+- POST /potentia: cria uma nova potentia
+- GET /potentia: lista todas as potentias
+- GET /potentia/{id}: busca uma potentia pelo ID
+- PUT /potentia/{id}: atualiza uma potentia existente
+- DELETE /potentia/{id}: remove uma potentia
+
 ## Requisitos
 
 - .NET SDK 10.0 ou superior
