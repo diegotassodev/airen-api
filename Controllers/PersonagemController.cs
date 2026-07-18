@@ -35,7 +35,7 @@ public class PersonagemController : ControllerBase {
 
     [HttpGet("{id}")]
     public IActionResult BuscaPersonagensPorId(int id) {
-        var personagem = _context.Personagens?.First(p => p.Id == id);
+        var personagem = _mapper.Map<ReadPersonagemDto>(_context.Personagens?.First(p => p.Id == id));
         if (personagem == null) return NotFound();
         else return Ok(personagem);
     }

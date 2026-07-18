@@ -35,7 +35,7 @@ public class PotentiaController : ControllerBase {
 
     [HttpGet("{id}")]
     public IActionResult BuscaPotentiasPorId(int id) {
-        var potentia = _context.Potentias?.First(p => p.Id == id);
+        var potentia = _mapper.Map<ReadPotentiaDto>(_context.Potentias?.First(p => p.Id == id));
         if (potentia == null) return NotFound();
         else return Ok(potentia);
     }
