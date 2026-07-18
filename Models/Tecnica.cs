@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AirenApi.Models;
 
-public class Potentia {
+public class Tecnica {
 
     [Key]
     [Required]
@@ -14,10 +15,10 @@ public class Potentia {
     [Required (ErrorMessage = "A descrição não foi definida")]
     public string? Descricao {get;set;}
 
-    public string? LinkMusica {get;set;}
+    [Required (ErrorMessage = "A categoria não foi definida")]
+    public string? Categoria {get;set;}
 
-    public virtual ICollection<Habilidade>? Habilidades {get;set;}
-
-    public int PersonagemId {get;set;}
-    public virtual Personagem? Personagem {get;set;}
+    [ForeignKey(nameof(Versao))]
+    public int IdVersao {get;set;}
+    public virtual Versao? Versao {get;set;}
 }
