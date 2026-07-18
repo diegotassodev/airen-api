@@ -11,6 +11,8 @@ public class CreatePotentiaDto {
     [Required (ErrorMessage = "A descrição não foi definida")]
     public string? Descricao {get;set;}
 
+    public string? LinkMusica {get;set;}
+
+    [Required (ErrorMessage = "O ID do personagem não foi definido")]
     public int PersonagemId {get;set;}
-    public virtual Personagem? Personagem {get;set;}
 }

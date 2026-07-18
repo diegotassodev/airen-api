@@ -3,7 +3,7 @@ using AirenApi.Models;
 
 namespace AirenApi.Data.DTOs;
 
-public class UpdatePotentiaDto {
+public class UpdateHobbyDto {
 
     [Required (ErrorMessage = "O nome não foi definido")]
     public string? Nome {get;set;}
@@ -11,8 +11,5 @@ public class UpdatePotentiaDto {
     [Required (ErrorMessage = "A descrição não foi definida")]
     public string? Descricao {get;set;}
 
-    public string? LinkMusica {get;set;}
-
-    [Required (ErrorMessage = "O ID do personagem não foi definido")]
-    public int PersonagemId {get;set;}
+    public int IdVersao {get;set;}
 }

@@ -3,13 +3,10 @@ using AirenApi.Models;
 
 namespace AirenApi.Data.DTOs;
 
-public class ReadPotentiaDto {
+public class ReadTecnicaDto {
 
     public int Id {get;set;}
     public string? Nome {get;set;}
     public string? Descricao {get;set;}
-    public string? LinkMusica {get;set;}
-    public string? NomePersonagem {get;set;}
-    public virtual ICollection<ReadHabilidadeDto>? ListaHabilidades {get;set;}
-
+    public string? Categoria {get;set;}
 }
